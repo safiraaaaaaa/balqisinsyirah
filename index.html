@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Balqis | Laman Utama</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --main-color: #800000;
+    --accent-color: #e91e63;
+    --bg-light: #f7f4ed;
+}
+
+/* ===== BODY ===== */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: var(--bg-light);
+    color: #333;
+}
+
+/* ===== HEADER ===== */
+header {
+    background-color: var(--main-color);
+    color: white;
+    padding: 15px;
+}
+
+/* TAJUK ATAS */
+.header-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 5px 0 15px;
+}
+
+/* BAR BAWAH TAJUK (CLOCK + NAV) */
+.header-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* CLOCK KIRI */
+.timer {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* NAV KANAN */
+.top-nav {
+    display: flex;
+    gap: 15px;
+}
+
+.top-nav a {
+    color: white;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.top-nav a[href="Index.html"] {
+    background-color: var(--accent-color);
+}
+
+.top-nav a:hover {
+    background-color: rgba(255,255,255,0.3);
+}
+
+/* ===== MOVING GIF ===== */
+@keyframes moveDown {
+    from { transform: translateY(0); }
+    to { transform: translateY(120vh); }
+}
+
+.vertical-marquee {
+    position: fixed;
+    left: 10px;
+    top: calc(15px + 2.5rem + 40px); /* 15px padding + tajuk + bar (anggaran) */
+    width: 80px;
+    animation: moveDown 10s linear infinite;
+    z-index: 0;
+}
+
+.vertical-marquee img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* ===== MAIN ===== */
+main {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    /* RUANG BAWAH SUPAYA FOOTER TAK TERLALU DEKAT HERO-CARD */
+    margin-bottom: 80px; 
+}
+
+.hero-card {
+    background: white;
+    padding: 40px;
+    max-width: 600px;
+    width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.hero-card h1 {
+    color: var(--main-color);
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: var(--main-color);
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-size: 0.9rem;
+}
+</style>
+</head>
+
+<body>
+
+<!-- MOVING DECORATION -->
+<div class="vertical-marquee">
+    <img src="me.gif" alt="Computer man" style="width:220px;height:220px;">
+</div>
+
+
+<header>
+    <h1 class="header-title">BALQIS'S WEBSITE</h1>
+
+    <div class="header-bar">
+        <div class="timer" id="clock">
+            <i class="fas fa-clock"></i> 00:00:00
+        </div>
+
+        <nav class="top-nav">
+            <a href="index.html"><i class="fas fa-house"></i> Home</a>
+            <a href="biodata.html"><i class="fas fa-user"></i> Biodata</a>
+            <a href="family.html"><i class="fas fa-people-group"></i> Family</a>
+            <a href="experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+            <a href="education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+            <a href="gallery.html"><i class="fas fa-image"></i> Gallery</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="hero-card">
+        <h1>Welcome to My Website ✨</h1>
+        <p>
+            Hello! Thank you for visiting my website ❤️<br><br>
+            Hope you enjoy exploring my journey.
+        </p>
+    </div>
+</main>
+
+<footer>
+    Copyright © QYSSS | All Rights Reserved.
+</footer>
+
+<!-- CLOCK SCRIPT -->
+<script>
+function updateClock() {
+    const now = new Date();
+    const h = String(now.getHours()).padStart(2,'0');
+    const m = String(now.getMinutes()).padStart(2,'0');
+    const s = String(now.getSeconds()).padStart(2,'0');
+    document.getElementById("clock").innerHTML =
+        `<i class="fas fa-clock"></i> ${h}:${m}:${s}`;
+}
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
