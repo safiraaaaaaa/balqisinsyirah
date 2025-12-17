@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Family | Laman Web Balqis</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+    --main-color: #800000;
+    --accent-color: #e91e63;
+    --text-color-dark: #333;
+    --background-light: #f7f4ed;
+    --card-border-color: #b71c1c;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-color-dark);
+    background: var(--background-light);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.header-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 5px 0 15px;
+}
+.header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.timer {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+.top-nav {
+    display: flex;
+    gap: 10px;
+}
+.top-nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+.top-nav a[href="Family.html"] {
+    background-color: var(--accent-color);
+}
+.top-nav a:hover {
+    background-color: rgba(255,255,255,0.3);
+    transform: scale(1.05);
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+.family-timeline-wrapper h2 {
+    color: var(--main-color);
+    margin-bottom: 15px;
+}
+
+.family-timeline-wrapper p.intro-text {
+    margin-bottom: 30px;
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.timeline-item {
+    background: #fff;
+    border: 3px solid var(--accent-color);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.timeline-item h3 {
+    margin: 0 0 8px;
+    color: var(--main-color);
+}
+
+.timeline-item p {
+    margin: 5px 0;
+}
+
+.timeline-item .date, .timeline-item .role {
+    font-style: italic;
+    color: var(--accent-color);
+}
+
+/* Family Photo */
+.family-photo-placeholder img {
+    max-width: 400px; /* Ubah saiz di sini jika mahu lebih besar/kecil */
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 15px;
+    border: 3px solid var(--accent-color);
+}
+
+footer {
+    background-color: var(--main-color);
+    color: #fff;
+    text-align: center;
+    padding: 12px;
+    font-size: 0.9rem;
+}
+
+@media(max-width:768px){
+    .top-nav {
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 5px;
+    }
+
+    h1.header-title {
+        font-size: 2rem;
+    }
+
+    .family-photo-placeholder img {
+        max-width: 100%; /* Gambar jadi responsive di mobile */
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1 class="header-title">FAMILY</h1>
+    <div class="header-bar">
+        <div class="timer" id="clock"><i class="fas fa-clock"></i> 00:00:00</div>
+        <nav class="top-nav">
+            <a href="Index.html"><i class="fas fa-house"></i> Home</a>
+            <a href="Biodata.html"><i class="fas fa-user"></i> Biodata</a>
+            <a href="Family.html"><i class="fas fa-people-group"></i> Family</a>
+            <a href="Experience.html"><i class="fas fa-briefcase"></i> Experience</a>
+            <a href="Education.html"><i class="fas fa-graduation-cap"></i> Education</a>
+            <a href="Gallery.html"><i class="fas fa-image"></i> Gallery</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="family-timeline-wrapper"> 
+
+        <!-- Family Photo at the Top -->
+        <div class="family-photo-placeholder" style="text-align:center; margin-bottom: 50px;">
+            <h2><i class="fas fa-camera"></i> Family Memories</h2>
+            <img src="pp.jpg" alt="Family Photo">
+        </div>
+
+        <h2><i class="fas fa-home"></i> Family Members</h2>
+        <p class="intro-text">Family is my main support system. Here is the lineup of family members who shape my life.</p>
+
+        <div class="timeline">
+            <div class="timeline-item">
+                <h3><i class="fas fa-hand-holding-heart"></i> Osman bin Kolod (Father)</h3>
+                <p>Date of Birth: 6<sup>th</sup> April</p>
+                <p>Passed away: 2014</p>
+                <p> My late father, Osman bin Kolod, was a kind and caring man who always encouraged me to do my best. He was the foundation of our family and inspired me to value honesty, hard work, and love. Even though he passed away in 2014, his teachings and memories continue to guide me every day.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3><i class="fas fa-hand-holding-heart"></i> Patrick bin Dingol (Step-Father)</h3>
+                <p>Date of Birth: 13<sup>th</sup> May</p>
+                <p> My step-father, Patrick bin Dingol, has been a supportive and understanding figure in my life. He has always offered guidance and care, helping me grow and adapt while providing a loving family environment.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3><i class="fas fa-user-friends"></i> Julinah Misud (Mother)</h3>
+                <p>Date of Birth: 26<sup>th</sup> July 1978</p>
+                <p> My mother, Julinah Misud, born on 26th July 1978, is a devoted and patient parent. She balances love and discipline, making sure all her children feel valued and supported. Her wisdom and guidance have been a constant source of strength.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3><i class="fas fa-male"></i> Mohd Ainal bin Osman (Elder Brother)</h3>
+                <p>Date of Birth: 12<sup>th</sup> August 1998</p>
+                <p>My elder brother, Mohd Ainal bin Osman, born on 12th August 1998, has always been a role model for me. He encourages me to work hard and stay focused on my goals, offering advice and guidance whenever I need it.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3><i class="fas fa-female"></i> Siti Rabiah binti Osman (Elder Sister)</h3>
+                <p>Date of Birth: 9<sup>th</sup> October 2000</p>
+                <p> My elder sister, Siti Rabiah binti Osman, born on 9th October 2000, is caring and thoughtful. She always supports me in my studies and daily life, teaching me important life lessons and helping me build confidence.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3><i class="fas fa-star"></i> Balqis Insyirah binti Osman (Me)</h3>
+                <p>Date of Birth: 8<sup>th</sup> July 2005</p>
+                <p>Me</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3><i class="fas fa-male"></i> Imad Aiman bin Osman (Younger Brother)</h3>
+                <p>Date of Birth: 26<sup>th</sup> December 2007</p>
+                <p> My younger brother, Imad Aiman bin Osman, born on 26th December 2007, is cheerful and energetic. He brings joy to the family and reminds me to have fun while learning and growing together.</p>
+            </div>
+
+            <div class="timeline-item">
+                <h3><i class="fas fa-female"></i> Nur Dzakiyyah binti Osman (Younger Sister)</h3>
+                <p>Date of Birth: 10<sup>th</sup> August 2010</p>
+                <p> My younger sister, Nur Dzakiyyah binti Osman, born on 10th August 2010, is sweet and caring. She is full of curiosity and always brings laughter into our home, making our family moments even more special.</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    Copyright © QYSSS | All Rights Reserved.
+</footer>
+
+<script>
+function updateClock() {
+    const now = new Date();
+    document.getElementById("clock").innerHTML =
+        `<i class="fas fa-clock"></i> ${now.toLocaleTimeString()}`;
+}
+setInterval(updateClock, 1000);
+updateClock();
+</script>
+
+</body>
+</html>
+
+
+
